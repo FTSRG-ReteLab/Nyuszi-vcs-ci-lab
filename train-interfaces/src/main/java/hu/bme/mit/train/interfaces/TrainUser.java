@@ -10,5 +10,5 @@ public interface TrainUser {
 
     void setAlarmState(boolean b);
 
-    boolean getAlarmSate();
+    boolean getAlarmState();
 }
