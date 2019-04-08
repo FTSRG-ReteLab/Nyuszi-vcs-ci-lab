@@ -50,7 +50,7 @@ public class TrainSensorTest {
     @Test
     public void betweenMargin(){
         trainSensor.overrideSpeedLimit(250);
-        verify(mockTU,times(0)).setAlarmState(false);
+        verify(mockTU,times(0)).setAlarmState(true);
     }
 
 
