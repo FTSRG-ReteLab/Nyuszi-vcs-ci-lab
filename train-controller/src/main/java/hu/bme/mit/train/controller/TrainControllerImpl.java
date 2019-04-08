@@ -2,6 +2,7 @@ package hu.bme.mit.train.controller;
 
 import hu.bme.mit.train.interfaces.TrainController;
 import java.util.Timer;
+import java.util.TimerTask;
 
 public class TrainControllerImpl implements TrainController {
 
@@ -10,7 +11,7 @@ public class TrainControllerImpl implements TrainController {
 	private int speedLimit = 10;
 	private Thread thread;
 
-	public void run(){
+	/*public void run(){
 		thread.run();
 		try{
 			followSpeed();
@@ -18,10 +19,14 @@ public class TrainControllerImpl implements TrainController {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-	}
+	}*/
 
 	public TrainControllerImpl(){
-		thread = new Thread(this::run);
+		new Timer().schedule(new TimerTask(){
+			public void run(){
+				followSpeed();
+			}
+		},1000);
 	}
 
 	@Override
