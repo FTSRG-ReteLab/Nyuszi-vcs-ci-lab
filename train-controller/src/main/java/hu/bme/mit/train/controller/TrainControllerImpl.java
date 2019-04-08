@@ -8,7 +8,6 @@ public class TrainControllerImpl implements TrainController {
 	private int step = 0;
 	private int referenceSpeed = 0;
 	private int speedLimit = 0;
-	private Timer timer = new Timer();
 	private Thread thread;
 
 	public void run(){
@@ -19,7 +18,7 @@ public class TrainControllerImpl implements TrainController {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-	};
+	}
 
 	public TrainControllerImpl(){
 		thread = new Thread(this::run);
