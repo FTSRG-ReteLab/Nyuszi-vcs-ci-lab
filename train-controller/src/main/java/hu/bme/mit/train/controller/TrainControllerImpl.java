@@ -7,7 +7,7 @@ public class TrainControllerImpl implements TrainController {
 
 	private int step = 0;
 	private int referenceSpeed = 0;
-	private int speedLimit = 20;
+	private int speedLimit = 10;
 	private Thread thread;
 
 	public void run(){

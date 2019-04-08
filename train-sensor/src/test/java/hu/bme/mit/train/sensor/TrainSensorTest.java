@@ -27,7 +27,7 @@ public class TrainSensorTest {
     }
     @Test
 	public void checkSpeedLimit(){
-	assertEquals(20,20);
+	assertEquals(10,10);
   }
 
     @Test
